@@ -26,3 +26,19 @@ jobs:
 
       - name: Run tests
         run: yarn unit:test
+
+  dev-environment:
+    runs-on: ubuntu-latest
+    environment: develop
+    steps:
+      - name: Print environment variables
+        run: |
+          echo "Environment: ${{ vars.ENVIRONMENT }}"
+
+  staging-environment:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Print environment variables
+        run: |
+          echo "Environment: ${{ vars.ENVIRONMENT }}"

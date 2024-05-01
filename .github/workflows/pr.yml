@@ -42,3 +42,9 @@ jobs:
       - name: Print environment variables
         run: |
           echo "Environment: ${{ vars.ENVIRONMENT }}"
+
+  mac-runner:
+    runs-on: macos-latest
+    steps:
+      - name: Print OS version
+        run: sw_vers
